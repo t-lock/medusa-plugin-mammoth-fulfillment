@@ -1,0 +1,39 @@
+{
+  "name": "medusa-plugin-mammoth-fulfillment",
+  "version": "1.0.0",
+  "description": "A mammoth fulfillment provider for Medusa (based on manual fulfillment)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t-lock/medusa-plugin-mammoth-fulfillment"
+  },
+  "author": "Timothy Wheelock, Army of Bees",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/runtime": "^7.9.6",
+    "client-sessions": "^0.8.0",
+    "cross-env": "^5.2.1",
+    "jest": "^25.5.4",
+    "medusa-interfaces": "^1.3.7"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests src",
+    "build": "babel src --out-dir . --ignore '**/__tests__','**/__mocks__'",
+    "watch": "babel -w src --out-dir . --ignore '**/__tests__','**/__mocks__'",
+    "prepare": "cross-env NODE_ENV=production yarn run build"
+  },
+  "peerDependencies": {
+    "medusa-interfaces": "1.3.7"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-classes": "^7.9.5",
+    "@babel/plugin-transform-instanceof": "^7.8.3",
+    "@babel/runtime": "^7.7.6",
+    "express": "^4.17.1"
+  }
+}
