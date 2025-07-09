@@ -2,7 +2,10 @@
   "name": "medusa-plugin-mammoth-fulfillment",
   "version": "1.0.0",
   "description": "A mammoth fulfillment provider for Medusa (based on manual fulfillment)",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/t-lock/medusa-plugin-mammoth-fulfillment"
@@ -23,8 +26,8 @@
   },
   "scripts": {
     "test": "jest --passWithNoTests src",
-    "build": "babel src --out-dir . --ignore '**/__tests__','**/__mocks__'",
-    "watch": "babel -w src --out-dir . --ignore '**/__tests__','**/__mocks__'",
+    "build": "babel src --out-dir dist --ignore '**/__tests__','**/__mocks__'",
+    "watch": "babel -w src --out-dir dist --ignore '**/__tests__','**/__mocks__'",
     "prepare": "cross-env NODE_ENV=production yarn run build"
   },
   "peerDependencies": {
